@@ -2,6 +2,8 @@
 
 Open is a community-driven, global collaboration platform that facilitates the submission and development of ideas using open-source principles and a fair licensing system for assigning ownership based on individual contributions. Our goal is to solve the problem of wasted talent by creating a more efficient and effective way to innovate and create new products and services through multi-tiered collaboration on a global scale.
 
+Check us out at (github.com/unboundideas)[https://github.com/unboundideas].
+
 ### Problem
 
 The current system is centralized and siloed, leading to a lack of diversity and inclusivity in innovation and product development. 
