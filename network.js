@@ -345,6 +345,8 @@ function draw() {
         edges: edges,
     };
     var options = {
+        width: "100%",
+        height: "100%",
         nodes: {
             shape: "dot",
             size: 16,
@@ -363,9 +365,6 @@ function draw() {
         },
     };
     var network = new vis.Network(container, data, options);
-
-    // Adjust the network visualization to fill the viewport
-    network.setSize("100%", "100%");
 }
 
 window.addEventListener("load", () => {
