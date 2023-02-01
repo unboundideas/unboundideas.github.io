@@ -363,16 +363,10 @@ function draw() {
         },
     };
     var network = new vis.Network(container, data, options);
+
+    // Adjust the network visualization to fill the viewport
+    network.setSize("100%", "100%");
 }
-
-// Get the parent container element
-var container = document.getElementById("mynetwork");
-
-// Create a new network visualization
-var network = new vis.Network(container, data, options);
-
-// Adjust the network visualization to fill the viewport
-network.setSize("100%", "100%");
 
 window.addEventListener("load", () => {
     draw();
