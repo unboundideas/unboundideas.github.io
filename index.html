@@ -6,37 +6,97 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
   <style>
-    body {
+    .text-background {
       font-family: 'Open Sans', sans-serif;
       font-weight: 300;
-      background-color: #f2f2f2;
+      font-size: 100px;
+      line-height: 100px;
+      color: rgba(255, 255, 255, 0.5);
       height: 100vh;
+      width: 100vw;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: justify;
+    }
+
+    .text {
+      background-color: #f2f2f2;
+      height: 100vh;
+      width: 100vw;
+      z-index: -1;
+      position: absolute;
     }
   </style>
   <title>Open Collaborative Innovation</title>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css" rel="stylesheet" type="text/css" />
 
+  <script type="text/javascript">
+    // specify the data for the network graph
+    function draw() {
+      // create some nodes
+      var nodes = [
+        { id: 0, label: "Blockchain", group: 1 },
+        { id: 1, label: "OpenAI", group: 1 },
+        { id: 2, label: "Project Development", group: 1 },
+        { id: 3, label: "Fairtrade", group: 1 },
+        { id: 4, label: "Decentralized", group: 1 },
+        { id: 5, label: "Distributed Systems", group: 1 },
+        { id: 6, label: "Artificial Intelligence", group: 1 },
+        { id: 7, label: "Data Science", group: 1 },
+        { id: 8, label: "Machine Learning", group: 1 },
+        { id: 9, label: "Cybersecurity", group: 1 },
+        { id: 10, label: "Neural Networks", group: 2 },
+        { id: 11, label: "Deep Learning", group: 2 },
+        { id: 12, label: "Computer Vision", group: 3 },
+        { id: 13, label: "Data Management", group: 2 },
+        { id: 14, label: "Cloud Computing", group: 2 },
+        { id: 15, label: "Big Data", group: 2 },
+        { id: 16, label: "Automation", group: 3 },
+        { id: 17, label: "Internet of Things", group: 3 },
+        { id: 18, label: "Data Storage", group: 3 },
+        { id: 19, label: "Data Backup", group: 3 },
+        { id: 20, label: "Data Recovery", group: 3 },
+        { id: 21, label: "Data Analysis", group: 3 },
+        { id: 22, label: "Data Visualization", group: 3 },
+        { id: 23, label: "Data Mining", group: 3 },
+        { id: 24, label: "Data Management Systems", group: 4 },
+        { id: 25, label: "Data Management Tools", group: 4 },
+        { id: 26, label: "Data Warehousing", group: 5 },
+        { id: 27, label: "Data Engineering", group: 4 },
+        { id: 28, label: "Data Architecture", group: 0 },
+        { id: 29, label: "Data Modelling", group: 2 },
+        { id: 30, label: "Data Quality", group: 3 },
+        { id: 31, label: "Data Integration", group: 2 },
+        { id: 32, label: "Data Cleansing", group: 2 },
+        { id: 33, label: "Data Validation", group: 2 },
+        { id: 34, label: "Data Governance", group: 2 },
+        { id: 35, label: "Data Security", group: 2 },
+        { id: 36, label: "Data Privacy", group: 2 },
+        { id: 37, label: "Data Compliance", group: 2 },
+        { id: 38, label: "Data Management Strategies", group: 2 },
+        { id: 39, label: "Data Management Solutions", group: 4 },
+        { id: 40, label: "Data Management Services", group: 6 },
+        { id: 41, label: "Data Management Processes", group: 4 },
+      ];
+      var edges = [];
+
+      // specify the options for the network graph
+      var options = {};
+
+      // create a network graph using vis.js
+      var container = document.getElementById("network");
+      var data = { nodes: nodes, edges: edges };
+      var network = new vis.Network(container, data, options);
+    }
+  </script>
+
 </head>
 
 <body>
-  <header>
-    <!-- <h1>Open</h1> -->
-    <!-- <nav>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">FAQ</a></li>
-        <li><a href="#">Contact Us</a></li>
-      </ul>
-    </nav> -->
-  </header>
-  <main>
-    <h2>A Community for Problem Solvers</h2>
-    <p>
+  <div class="text">
+    <div class="text-background">
       The Open organization is dedicated to promoting and implementing the concept of "Open Everything" in the field of
       technology and information access. Our mission is to remove proprietary restrictions on any information and make
       it freely available and accessible to everyone, with the goal of promoting collaboration, innovation, and the free
@@ -60,76 +120,20 @@
       your help to make the vision of "Open Everything" a reality. Check out our projects on Github, and feel free to
       reach out to us with any questions or ideas. Together, we can create a more just and equitable society through the
       power of open access.
-    </p>
+    </div>
+  </div>
 
-    <div id="network"></div>
-    <script type="text/javascript">
-      // specify the data for the network graph
-      function draw() {
-        // create some nodes
-        var nodes = [
-          { id: 0, label: "Blockchain", group: 1 },
-          { id: 1, label: "OpenAI", group: 1 },
-          { id: 2, label: "Project Development", group: 1 },
-          { id: 3, label: "Fairtrade", group: 1 },
-          { id: 4, label: "Decentralized", group: 1 },
-          { id: 5, label: "Distributed Systems", group: 1 },
-          { id: 6, label: "Artificial Intelligence", group: 1 },
-          { id: 7, label: "Data Science", group: 1 },
-          { id: 8, label: "Machine Learning", group: 1 },
-          { id: 9, label: "Cybersecurity", group: 1 },
-          { id: 10, label: "Neural Networks", group: 2 },
-          { id: 11, label: "Deep Learning", group: 2 },
-          { id: 12, label: "Computer Vision", group: 3 },
-          { id: 13, label: "Data Management", group: 2 },
-          { id: 14, label: "Cloud Computing", group: 2 },
-          { id: 15, label: "Big Data", group: 2 },
-          { id: 16, label: "Automation", group: 3 },
-          { id: 17, label: "Internet of Things", group: 3 },
-          { id: 18, label: "Data Storage", group: 3 },
-          { id: 19, label: "Data Backup", group: 3 },
-          { id: 20, label: "Data Recovery", group: 3 },
-          { id: 21, label: "Data Analysis", group: 3 },
-          { id: 22, label: "Data Visualization", group: 3 },
-          { id: 23, label: "Data Mining", group: 3 },
-          { id: 24, label: "Data Management Systems", group: 4 },
-          { id: 25, label: "Data Management Tools", group: 4 },
-          { id: 26, label: "Data Warehousing", group: 5 },
-          { id: 27, label: "Data Engineering", group: 4 },
-          { id: 28, label: "Data Architecture", group: 0 },
-          { id: 29, label: "Data Modelling", group: 2 },
-          { id: 30, label: "Data Quality", group: 3 },
-          { id: 31, label: "Data Integration", group: 2 },
-          { id: 32, label: "Data Cleansing", group: 2 },
-          { id: 33, label: "Data Validation", group: 2 },
-          { id: 34, label: "Data Governance", group: 2 },
-          { id: 35, label: "Data Security", group: 2 },
-          { id: 36, label: "Data Privacy", group: 2 },
-          { id: 37, label: "Data Compliance", group: 2 },
-          { id: 38, label: "Data Management Strategies", group: 2 },
-          { id: 39, label: "Data Management Solutions", group: 4 },
-          { id: 40, label: "Data Management Services", group: 6 },
-          { id: 41, label: "Data Management Processes", group: 4 },
-        ];
-        var edges = [];
 
-        // specify the options for the network graph
-        var options = {};
+  <div id="network"></div>
 
-        // create a network graph using vis.js
-        var container = document.getElementById("network");
-        var data = { nodes: nodes, edges: edges };
-        var network = new vis.Network(container, data, options);
-      }
-    </script>
-    <!-- // <form>
+  <!-- // <form>
       // <input type="text" placeholder="Search Questions">
       // <button type="submit">Search</button>
       // </form> -->
-  </main>
+  <!-- </main>
   <footer>
     <p>&copy; Open 2023</p>
-  </footer>
+  </footer> -->
 </body>
 
 </html>
