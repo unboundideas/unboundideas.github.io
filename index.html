@@ -4,6 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <title>Open: A Collaborative Platform for Open-Source Innovation</title>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css" rel="stylesheet" type="text/css" />
+
 </head>
 
 <body>
@@ -44,6 +47,23 @@
       reach out to us with any questions or ideas. Together, we can create a more just and equitable society through the
       power of open access.
     </p>
+
+    <div id="network"></div>
+    <script type="text/javascript">
+      // specify the data for the network graph
+      var nodes = [
+        { id: 0, label: "Myriel", group: 1 },
+      ];
+      var edges = [];
+
+      // specify the options for the network graph
+      var options = {};
+
+      // create a network graph using vis.js
+      var container = document.getElementById("network");
+      var data = { nodes: nodes, edges: edges };
+      var network = new vis.Network(container, data, options);
+    </script>
     <form>
       <input type="text" placeholder="Search Questions">
       <button type="submit">Search</button>
