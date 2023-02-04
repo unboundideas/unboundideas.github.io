@@ -7,7 +7,7 @@ function draw() {
             group: 1,
             size: 100,
             fixed: true,
-            shape: "circle",
+            shape: "text",
             size: 102,
             font: {
                 size: 92,
