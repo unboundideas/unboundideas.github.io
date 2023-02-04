@@ -6,7 +6,7 @@ function draw() {
             label: "Open",
             group: 1, size: 100,
             fixed: true,
-            shape: "circle" 
+            shape: "circle",
             size: 42,
             font: {
                 size: 42,
