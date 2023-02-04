@@ -79,7 +79,7 @@ function draw() {
         { id: 75, label: "Open Customer Engagement", group: 4 }
     ];
     // add central node
-    var nodes = [{ id: 100, label: "O P E N", group: 0 }].concat(nodes);
+    var nodes = [{ id: 100, label: "O P E N", group: 0, size:84 }].concat(nodes);
 
     // // create some edges
     // var edges = [
@@ -340,19 +340,18 @@ function draw() {
     // ];
 
     // update connections (edges) to point to central node
-    // var edges = nodes.map(function (node, index) {
-    //     return { from: node.id, to: 100 };
-    // });
+    var edges = nodes.map(function (node, index) {
+        return { from: node.id, to: 100 };
+    });
     // var edges = [];
-    
-    for (var i = 0; i < nodes.length; i++) {
-        var fromNode = nodes[i];
-        var randomNumber = Math.random();
-        if (randomNumber < 0.5) {
-            var toNode = nodes[Math.floor(Math.random() * nodes.length)];
-            edges.push({ from: fromNode.id, to: toNode.id });
-        }
-    }
+    // for (var i = 0; i < nodes.length; i++) {
+    //     var fromNode = nodes[i];
+    //     var randomNumber = Math.random();
+    //     if (randomNumber < 0.5) {
+    //         var toNode = nodes[Math.floor(Math.random() * nodes.length)];
+    //         edges.push({ from: fromNode.id, to: toNode.id });
+    //     }
+    // }
 
     // create a network
     var container = document.getElementById("mynetwork");
@@ -366,6 +365,7 @@ function draw() {
     var options = {
         width: "100%",
         height: "100%",
+        autoResize: true,
         nodes: {
             shape: "dot",
             size: 42,
