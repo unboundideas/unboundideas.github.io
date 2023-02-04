@@ -388,14 +388,14 @@ function draw() {
         },
         physics: {
             forceAtlas2Based: {
-                gravitationalConstant: -200,
+                gravitationalConstant: -26,
                 centralGravity: -0.0005,
-                springLength: 1000,
+                springLength: 800,
                 springConstant: 0.18,
-                // repulsion: {
-                //     springLength: 200,
-                // },
-                avoidOverlap: 0.5
+                repulsion: {
+                    springLength: 200,
+                },
+                avoidOverlap: 0.1
             },
             maxVelocity: 25,
             solver: "forceAtlas2Based",
