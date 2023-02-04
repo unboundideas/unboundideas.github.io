@@ -1,7 +1,18 @@
 function draw() {
     // create some nodes
     var nodes = [
-        { id: 100, label: "Open", group: 1, size: 100, fixed: true, shape: "circle" },
+        {
+            id: 100,
+            label: "Open",
+            group: 1, size: 100,
+            fixed: true,
+            shape: "circle" 
+            size: 42,
+            font: {
+                size: 42,
+                color: '#000000'
+            }
+        },
         { id: 1, label: "Open Data", group: 1 },
         { id: 2, label: "Open Access", group: 1 },
         { id: 3, label: "Open Standards", group: 1 },
@@ -380,7 +391,7 @@ function draw() {
                 centralGravity: 0.005,
                 springLength: 1600,
                 springConstant: 0.18,
-                repulsion : {
+                repulsion: {
                     springLength: 200
                 }
             },
