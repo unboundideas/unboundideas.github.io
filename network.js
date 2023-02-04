@@ -350,6 +350,10 @@ function draw() {
         nodes: {
             shape: "dot",
             size: 26,
+            font: {
+                size: 30,
+                color: '#ffffff'
+            }
         },
         physics: {
             forceAtlas2Based: {
