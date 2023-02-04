@@ -390,7 +390,7 @@ function draw() {
             forceAtlas2Based: {
                 gravitationalConstant: -200,
                 centralGravity: -0.0005,
-                springLength: 800,
+                springLength: 1000,
                 springConstant: 0.18,
                 // repulsion: {
                 //     springLength: 200,
