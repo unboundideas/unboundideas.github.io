@@ -4,7 +4,7 @@ function draw() {
         {
             id: 100,
             label: "Open",
-            group: 1, 
+            group: 1,
             size: 100,
             fixed: true,
             shape: "circle",
@@ -394,7 +394,8 @@ function draw() {
                 springConstant: 0.18,
                 repulsion: {
                     springLength: 200
-                }
+                },
+                avoidOverlap: 0.1
             },
             maxVelocity: 25,
             solver: "forceAtlas2Based",
