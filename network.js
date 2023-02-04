@@ -340,9 +340,20 @@ function draw() {
     // ];
 
     // update connections (edges) to point to central node
-    var edges = nodes.map(function (node, index) {
-        return { from: node.id, to: 100 };
-    });
+    // var edges = nodes.map(function (node, index) {
+    //     return { from: node.id, to: 100 };
+    // });
+    // var edges = [];
+    
+    for (var i = 0; i < nodes.length; i++) {
+        var fromNode = nodes[i];
+        var randomNumber = Math.random();
+        if (randomNumber < 0.5) {
+            var toNode = nodes[Math.floor(Math.random() * nodes.length)];
+            edges.push({ from: fromNode.id, to: toNode.id });
+        }
+    }
+
     // create a network
     var container = document.getElementById("mynetwork");
     container.style.clientWidth = '100%';
