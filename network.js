@@ -4,12 +4,13 @@ function draw() {
         {
             id: 100,
             label: "Open",
-            group: 1, size: 100,
+            group: 1, 
+            size: 100,
             fixed: true,
             shape: "circle",
-            size: 42,
+            size: 102,
             font: {
-                size: 42,
+                size: 92,
                 color: '#000000'
             }
         },
@@ -388,8 +389,8 @@ function draw() {
         physics: {
             forceAtlas2Based: {
                 gravitationalConstant: -26,
-                centralGravity: 0.005,
-                springLength: 1600,
+                centralGravity: -0.005,
+                springLength: 2000,
                 springConstant: 0.18,
                 repulsion: {
                     springLength: 200
