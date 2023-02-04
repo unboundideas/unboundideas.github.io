@@ -388,7 +388,7 @@ function draw() {
         },
         physics: {
             forceAtlas2Based: {
-                gravitationalConstant: -26,
+                gravitationalConstant: -50,
                 centralGravity: -0.0005,
                 springLength: 800,
                 springConstant: 0.18,
