@@ -349,9 +349,9 @@ function draw() {
         height: "100%",
         nodes: {
             shape: "dot",
-            size: 52,
+            size: 42,
             font: {
-                size: 52,
+                size: 42,
                 color: '#000000'
             }
         },
@@ -359,7 +359,7 @@ function draw() {
             forceAtlas2Based: {
                 gravitationalConstant: -26,
                 centralGravity: 0.005,
-                springLength: 900,
+                springLength: 1200,
                 springConstant: 0.18,
             },
             maxVelocity: 146,
