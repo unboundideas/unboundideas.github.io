@@ -351,6 +351,7 @@ function draw() {
         nodes: nodes,
         edges: edges,
     };
+    nodes[100].size = 62;
     var options = {
         width: "100%",
         height: "100%",
