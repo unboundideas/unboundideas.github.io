@@ -352,14 +352,14 @@ function draw() {
             size: 72,
             font: {
                 size: 72,
-                color: '#ffffff'
+                color: '#000000'
             }
         },
         physics: {
             forceAtlas2Based: {
                 gravitationalConstant: -26,
                 centralGravity: 0.005,
-                springLength: 230,
+                springLength: 730,
                 springConstant: 0.18,
             },
             maxVelocity: 146,
