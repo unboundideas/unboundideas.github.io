@@ -352,9 +352,6 @@ function draw() {
     // ];
 
     // update connections (edges) to point to central node
-    var edges = nodes.map(function (node, index) {
-        return { from: node.id, to: 100 };
-    });
     // var edges = [];
     // for (var i = 0; i < nodes.length; i++) {
     //     var fromNode = nodes[i];
@@ -364,6 +361,10 @@ function draw() {
     //         edges.push({ from: fromNode.id, to: toNode.id });
     //     }
     // }
+
+    var edges = nodes.map(function (node, index) {
+        return { from: node.id, to: 100 };
+    });
 
     // create a network
     var container = document.getElementById("mynetwork");
