@@ -340,15 +340,15 @@ function draw() {
 
     // create a network
     var container = document.getElementById("mynetwork");
-    container.style.width = '100%';
-    container.style.height = '100%';
+    // container.style.width = '100%';
+    // container.style.height = '100%';
     var data = {
         nodes: nodes,
         edges: edges,
     };
     var options = {
-        width: "100%",
-        height: "100%",
+        // width: "100%",
+        // height: "100%",
         nodes: {
             shape: "dot",
             size: 16,
