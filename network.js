@@ -347,8 +347,8 @@ function draw() {
         edges: edges,
     };
     var options = {
-        // width: "100%",
-        // height: "100%",
+        width: "100%",
+        height: "100%",
         nodes: {
             shape: "dot",
             size: 26,
