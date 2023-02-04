@@ -1,7 +1,7 @@
 function draw() {
     // create some nodes
     var nodes = [
-        { id: 100, label: "Open", group: 1, size: 82, fixed: true, shape: "ellipse" },
+        { id: 100, label: "Open", group: 1, size: 100, fixed: true, shape: "circle" },
         { id: 1, label: "Open Data", group: 1 },
         { id: 2, label: "Open Access", group: 1 },
         { id: 3, label: "Open Standards", group: 1 },
