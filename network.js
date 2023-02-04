@@ -1,7 +1,7 @@
 function draw() {
     // create some nodes
     var nodes = [
-        { id: 0, label: "Open Source", group: 1 },
+        { id: 100, label: "Open", group: 1, size: 82, fixed: true, shape: "ellipse" },
         { id: 1, label: "Open Data", group: 1 },
         { id: 2, label: "Open Access", group: 1 },
         { id: 3, label: "Open Standards", group: 1 },
@@ -79,7 +79,7 @@ function draw() {
         { id: 75, label: "Open Customer Engagement", group: 4 }
     ];
     // add central node
-    var nodes = [{ id: 100, label: "O P E N", group: 0, size:84 }].concat(nodes);
+    // var nodes = [].concat(nodes);
 
     // // create some edges
     // var edges = [
