@@ -381,7 +381,7 @@ function draw() {
                 springLength: 1600,
                 springConstant: 0.18,
             },
-            maxVelocity: 52,
+            maxVelocity: 25,
             solver: "forceAtlas2Based",
             timestep: 0.35,
             stabilization: { iterations: 150 },
