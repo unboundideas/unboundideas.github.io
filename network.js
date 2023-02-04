@@ -78,6 +78,9 @@ function draw() {
         { id: 74, label: "Open Customer Insights", group: 4 },
         { id: 75, label: "Open Customer Engagement", group: 4 }
     ];
+    // add central node
+    var nodes = [{ id: 100, label: "Central Node", group: 0 }].concat(nodes);
+
     // create some edges
     var edges = [
         { from: 1, to: 0 },
@@ -336,6 +339,10 @@ function draw() {
         { from: 76, to: 58 },
     ];
 
+    // update connections (edges) to point to central node
+    var edges = nodes.map(function (node, index) {
+        return { from: node.id, to: 100 };
+    });
     // create a network
     var container = document.getElementById("mynetwork");
     container.style.clientWidth = '100%';
