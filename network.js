@@ -349,9 +349,9 @@ function draw() {
         height: "100%",
         nodes: {
             shape: "dot",
-            size: 26,
+            size: 36,
             font: {
-                size: 30,
+                size: 36,
                 color: '#ffffff'
             }
         },
