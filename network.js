@@ -351,7 +351,7 @@ function draw() {
         // height: "100%",
         nodes: {
             shape: "dot",
-            size: 16,
+            size: 56,
         },
         physics: {
             forceAtlas2Based: {
