@@ -379,7 +379,7 @@ function draw() {
         // height: "100%",
         autoResize: true,
         nodes: {
-            shape: "dot",
+            shape: "circle",
             size: 42,
             font: {
                 size: 42,
