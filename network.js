@@ -340,8 +340,8 @@ function draw() {
 
     // create a network
     var container = document.getElementById("mynetwork");
-    container.style.clientWidth = '100%';
-    container.style.clientHeight = '100%';
+    // container.style.clientWidth = '100%';
+    // container.style.clientHeight = '100%';
     var data = {
         nodes: nodes,
         edges: edges,
@@ -351,7 +351,7 @@ function draw() {
         // height: "100%",
         nodes: {
             shape: "dot",
-            size: 56,
+            size: 26,
         },
         physics: {
             forceAtlas2Based: {
