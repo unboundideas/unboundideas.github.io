@@ -395,7 +395,7 @@ function draw() {
                 repulsion: {
                     springLength: 200,
                 },
-                avoidOverlap: 0.1
+                avoidOverlap: 1
             },
             maxVelocity: 25,
             solver: "forceAtlas2Based",
