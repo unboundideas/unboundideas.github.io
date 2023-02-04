@@ -79,7 +79,7 @@ function draw() {
         { id: 75, label: "Open Customer Engagement", group: 4 }
     ];
     // add central node
-    var nodes = [{ id: 100, label: "Central Node", group: 0 }].concat(nodes);
+    var nodes = [{ id: 100, label: "O P E N", group: 0 }].concat(nodes);
 
     // create some edges
     var edges = [
@@ -366,7 +366,7 @@ function draw() {
             forceAtlas2Based: {
                 gravitationalConstant: -26,
                 centralGravity: 0.005,
-                springLength: 1200,
+                springLength: 1600,
                 springConstant: 0.18,
             },
             maxVelocity: 146,
