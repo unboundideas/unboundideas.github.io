@@ -340,6 +340,8 @@ function draw() {
 
     // create a network
     var container = document.getElementById("mynetwork");
+    container.style.width = '100%';
+    container.style.height = '100%';
     var data = {
         nodes: nodes,
         edges: edges,
