@@ -109,7 +109,7 @@ function draw() {
         // height: "100%",
         autoResize: true,
         nodes: {
-            shape: "text",
+            shape: "ellipse",
             size: 42,
             font: {
                 size: 42,
