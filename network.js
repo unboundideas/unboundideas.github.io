@@ -122,10 +122,11 @@ function draw() {
                 centralGravity: -0.0005,
                 springLength: 800,
                 springConstant: 0.18,
-                repulsion: {
-                    springLength: 200,
-                },
                 avoidOverlap: 0.5
+            },
+
+            repulsion: {
+                springLength: 200,
             },
             maxVelocity: 25,
             solver: "forceAtlas2Based",
