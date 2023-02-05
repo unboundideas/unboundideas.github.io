@@ -406,16 +406,24 @@ function draw() {
     };
     var network = new vis.Network(container, data, options);
 
-    network.on("click", function (params) {
-        if (params.nodes.length) {
-            var nodeId = params.nodes[0];
-            var node = data.nodes.get(nodeId);
-            console.log("Clicked node:", node);
+    // network.on("click", function (params) {
+    //     if (params.nodes.length) {
+    //         var nodeId = params.nodes[0];
+    //         var node = data.nodes.get(nodeId);
+    //         console.log("Clicked node:", node);
 
-            // Display text based on the node's properties
-            var text = node.label + "\n" + node.value;
-            document.getElementById("node-text").innerHTML = text;
-        }
+    //         // Display text based on the node's properties
+    //         var text = node.label + "\n" + node.value;
+    //         document.getElementById("node-text").innerHTML = text;
+    //     }
+    // });
+    network.on("selectNode", function (params) {
+        var nodeId = params.nodes[0];
+        var node = network.body.data.nodes.get(nodeId);
+        var nodeProperties = node.properties;
+
+        // Display the properties in a div with id "node-info"
+        document.getElementById("node-info").innerHTML = nodeProperties;
     });
 
 }
