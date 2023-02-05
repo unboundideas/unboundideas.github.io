@@ -1,0 +1,18 @@
+body {
+    background-image: url(".images/bg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#mynetwork {
+    height: 100%;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+#vis-network {
+    height: 100%;
+}
